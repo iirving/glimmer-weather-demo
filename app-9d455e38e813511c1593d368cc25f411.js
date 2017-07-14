@@ -825,9 +825,9 @@ else for(var a=t.length-1;a>=0;a--)(r=t[a])&&(s=(o<3?r(s):o>3?r(e,n,s):r(e,n))||
 return o>3&&s&&Object.defineProperty(e,n,s),s},ko=function(t,e,n,i){return new(n||(n=Promise))(function(r,o){function s(t){try{u(i.next(t))}catch(t){o(t)}}function a(t){try{u(i.throw(t))}catch(t){o(t)}}function u(t){t.done?r(t.value):new n(function(e){e(t.value)}).then(s,a)}u((i=i.apply(t,e||[])).next())})},wo=function(t){function e(n){$t(this,e)
 var i=ee(this,t.call(this,n))
 return i.loadWeather(),i}return te(e,t),e.prototype.onKeyUp=function(t){this.addZip=t.target.value},e.prototype.clicked=function(){this.loadWeather()},e.prototype.loadWeather=function(){return ko(this,void 0,void 0,regeneratorRuntime.mark(function t(){var e,n,i,r,o,s=this
-return regeneratorRuntime.wrap(function(t){for(;;)switch(t.prev=t.next){case 0:return e=this.addZip||97239,console.log(e),t.next=4,fetch("http://api.wunderground.com/api/625172310aff38a6/geolookup/q/"+e+".json")
+return regeneratorRuntime.wrap(function(t){for(;;)switch(t.prev=t.next){case 0:return e=this.addZip||97239,console.log(e),t.next=4,fetch("https://api.wunderground.com/api/625172310aff38a6/geolookup/q/"+e+".json")
 case 4:return n=t.sent,t.next=7,n.json()
-case 7:return this.area=t.sent,i=this.area.location.city,r=this.area.location.state,t.next=12,fetch("http://api.wunderground.com/api/625172310aff38a6/conditions/q/"+r+"/"+i+".json")
+case 7:return this.area=t.sent,i=this.area.location.city,r=this.area.location.state,t.next=12,fetch("https://api.wunderground.com/api/625172310aff38a6/conditions/q/"+r+"/"+i+".json")
 case 12:return o=t.sent,t.next=15,o.json()
 case 15:this.weather=t.sent,console.log(this.weather.current_observation.temp_f),console.log(this.weather.current_observation.temp_c),setTimeout(function(){s.loadWeather()},1e4)
 case 19:case"end":return t.stop()}},t,this)}))},e}(oo)
