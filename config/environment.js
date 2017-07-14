@@ -1,10 +1,15 @@
-'use strict';
+'use strict'
 
-module.exports = function(environment) {
+module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'my-app',
     environment: environment
-  };
+  }
 
-  return ENV;
-};
+  if (environment === 'production') {
+    ENV.rootURL = '/glimmer-weather-demo/'
+    ENV.locationType = 'hash'
+  }
+
+  return ENV
+}
